@@ -19,6 +19,7 @@ function App() {
           <a href='http://localhost:3000/arts' className="navbar-brand btn btn-outline-primary" style={{ backgroundColor: "#e3f2fd" }}>List</a>
           <a href='http://localhost:3000/addart' className="navbar-brand btn btn-outline-primary" style={{ backgroundColor: "#e3f2fd" }}>Add Art</a>
           <a href='http://localhost:3000/about' className="navbar-brand btn btn-outline-primary" style={{ backgroundColor: "#e3f2fd" }}>About</a>
+          <a href='http://localhost:3000/login' className="navbar-brand btn btn-outline-primary" style={{ backgroundColor: "#e3f2fd" }}>Login</a>
           <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"
               onChange={handleChange} />

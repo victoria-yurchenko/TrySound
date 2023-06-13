@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import AddForm from './AddForm';
 
-export default function Arts({pattern}) {
+export default function Arts({ pattern }) {
 
   const [arts, setArts] = useState([]);
 
@@ -38,7 +38,14 @@ export default function Arts({pattern}) {
                     <td>{a.id}</td>
                     <td>{a.title}</td>
                     <td>{a.description}</td>
-                    <td><img src={"http://localhost:5242/api/trysound/image/" + a.id} alt='Album cover' height='100px' /></td>
+                    <td>
+                      <img
+                        src={"http://localhost:5242/api/trysound/image/" + a.id}
+                        alt='Album cover'
+                        height='100px'
+                        onClick={event => window.open(event.target.src, '_blank')}
+                      />
+                    </td>
                     <td><audio src={"http://localhost:5242/api/trysound/mp3/" + a.id} controls /></td>
                   </tr>
                 })
@@ -64,7 +71,14 @@ export default function Arts({pattern}) {
                       <td>{a.id}</td>
                       <td>{a.title}</td>
                       <td>{a.description}</td>
-                      <td><img src={"http://localhost:5242/api/trysound/image/" + a.id} alt='Album cover' height='100px' /></td>
+                      <td>
+                        <img
+                          src={"http://localhost:5242/api/trysound/image/" + a.id}
+                          alt='Album cover'
+                          height='100px'
+                          onClick={event => window.open(event.target.src, '_blank')}
+                        />
+                      </td>
                       <td><audio src={"http://localhost:5242/api/trysound/mp3/" + a.id} controls /></td>
                     </tr>
                   })
@@ -73,7 +87,7 @@ export default function Arts({pattern}) {
           </table>
       }
       <hr />
-      <AddForm />
+      {/* <AddForm /> */}
     </div>
   )
 }
