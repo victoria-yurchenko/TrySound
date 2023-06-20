@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import AddForm from './AddForm'
-import Arts from './Arts'
-import About from './About'
-import Login from './Login'
+import AddForm from '../AddForm/AddForm'
+import Arts from '../Arts/Arts'
+import About from '../About/About'
+import Login from '../Login/Login'
 
 export default function AppRouter({ pattern }) {
     return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import AddForm from './AddForm';
+import AddForm from '../AddForm/AddForm';
+import Player from './../Player/Player';
 
 export default function Arts({ pattern }) {
 
@@ -16,12 +17,18 @@ export default function Arts({ pattern }) {
   }, []);
 
   return (
-    <div>
-      <h3>Art Objects</h3>
-      {
-        pattern == ''
+    <div className='container'>
+      <div className='row'>
+        <div className='col-md-6'>
+          <Player song={arts[0]} songsList={arts} />
+        </div>
+
+    <div className='col-md-6'>
+      <div>
+        {
+          pattern == ''
           ?
-          <table className='table table-striped'>
+          <table className='table table-striped' style={{ marginTop: '30px' }}>
             <thead>
               <tr>
                 <th>Id</th>
@@ -85,6 +92,15 @@ export default function Arts({ pattern }) {
               }
             </tbody>
           </table>
+        }
+      </div>
+    </div>
+
+
+
+      </div>
+      {
+        
       }
       <hr />
       {/* <AddForm /> */}

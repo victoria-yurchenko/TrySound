@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Arts from './components/Arts';
-import AppRouter from './components/AppRouter';
+import Arts from './components/Arts/Arts';
+import AppRouter from './components/AppRouter/AppRouter';
 import { useState } from 'react';
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
 

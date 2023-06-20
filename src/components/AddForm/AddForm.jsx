@@ -49,15 +49,40 @@ export default function AddForm() {
 
   return (
     <div>
-      <h2>Add new art object</h2>
-      <form encType='multipart/form-data'>
-        <input type='text' placeholder='Enter title' value={art.title}
-          onChange={(event) => setArt({ ...art, title: event.target.value })} />
-        <input type='text' placeholder='Description' value={art.description}
-          onChange={(event) => setArt({ ...art, description: event.target.value })} />
-        <input type='file' onChange={selectCover} />
-        <input type='file' onChange={selectMp3} />
-        <button className='btn btn-success' onClick={handleSubmit} >Add Art</button>
+      <form
+        encType='multipart/form-data'
+        className='form-group'
+      >
+        <input
+          type='text'
+          placeholder='Enter title'
+          value={art.title}
+          className="form-control m-2"
+          onChange={(event) => setArt({ ...art, title: event.target.value })}
+        />
+        <input
+          type='text'
+          placeholder='Description'
+          value={art.description}
+          className="form-control m-2"
+          onChange={(event) => setArt({ ...art, description: event.target.value })}
+        />
+        <input
+          type='file'
+          accept='.jpg'
+          className="form-control m-2"
+          onChange={selectCover}
+        />
+        <input
+          type='file'
+          accept='.mp3'
+          className="form-control m-2"
+          onChange={selectMp3}
+        />
+        <button
+          className="form-control m-2 text-black btn btn-outline-primary" style={{ backgroundColor: "#e3f2fd" }}
+          onClick={handleSubmit}
+        >Add New</button>
       </form>
     </div>
   )
